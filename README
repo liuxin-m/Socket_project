@@ -1,0 +1,5 @@
+#该程序可以实现简单的client端与server端的即时通讯；
+#client端可以发送给server端一个简单的linux命令，Server端可以接受这条命令，并且将命令的执行结果发送到client端，并且在client端进行显示；
+#注意事项：在启动时，需要将server.py先进行后台执行，再执行client端的client.py，随后可以根据提示输入命令，由于python的模块限制，只允许执行一些简单的命令
+#在关闭时，注意先行关闭server的进程，再关闭client端进行，否则会导致server产生僵尸进程
+#千万注意，需要在不同的主机运行server程序和client程序时，需要更改client端client.py代码中的HOST_name变量，需要更改为Server端的IP，保证防火墙可用
